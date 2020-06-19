@@ -12,6 +12,7 @@ import {
 import PropTypes from 'prop-types';
 import isEqual from 'lodash.isequal';
 import { defaultStyles } from './styles';
+import { Input } from 'react-native-elements';
 
 export default class RNPickerSelect extends PureComponent {
     static propTypes = {
@@ -406,7 +407,7 @@ export default class RNPickerSelect extends PureComponent {
 
         return (
             <View pointerEvents="box-only" style={containerStyle}>
-                <TextInput
+                <Input
                     testID="text_input"
                     style={[
                         Platform.OS === 'ios' ? style.inputIOS : style.inputAndroid,
